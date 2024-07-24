@@ -333,3 +333,27 @@ footer {
         margin-bottom: 5px; /* Відступ між іконкою і нижньою частиною */
     }
 }
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .logo-title h1 {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .product-item {
+        min-width: 100%;
+    }
+}
