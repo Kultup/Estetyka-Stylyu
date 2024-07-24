@@ -13,7 +13,9 @@
     <header>
         <div class="container">
             <div class="logo-title">
-                <div class="logo"><img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/2.png" alt="Estetyka Stylyu"></div>
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/2.png" alt="Estetyka Stylyu">
+                </div>
                 <h1>Estetyka Stylyu</h1>
             </div>
             <div class="menu-toggle" id="menu-toggle">
@@ -70,8 +72,9 @@
                             <div class="slide"><img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/2/photo_2024-07-24_16-27-09.jpg" alt="Джинси"></div>
                         </div>
                     </div>
-                    <h3>Джинси</h3>
-                    <p>Ціна: 700 грн</p>
+                    <h3>Костюм двійка з натуральної тканини</h3>
+                    <p>1 (42/44): ОГ -107; ОБ-110<br>2 (46/48): ОГ -114; ОБ-116<br>Довжина штанів -105<br>Довжина сорочки - 75<br>Довжина рукава - 72</p>
+                    <p>Популярному принт доповнений актуальними лампасами</p>
                     <a href="#contact" class="btn">Замовити через Viber</a>
                 </div>
                 <!-- Додаткові товари можна додати тут -->
@@ -94,21 +97,21 @@
                 <span>Телефон: +380 123 456 789</span>
             </div>
             <div class="contact-item">
-                <span>Telegram: </span>
-                <a href="https://t.me/yourtelegram">
-                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-telegram-2111646.png" alt="Telegram" width="32px">
+                <span>Telegram:</span>
+                <a href="https://t.me/yourtelegram" target="_blank">
+                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-telegram-2111646.png" alt="Telegram">
                 </a>
             </div>
             <div class="contact-item">
-                <span>Instagram: </span>
-                <a href="https://www.instagram.com/iuliariazantseva?igsh=dWNyODA4eGlxc2xz">
-                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-social-15707749.png" width="32px" alt="Instagram">
+                <span>Instagram:</span>
+                <a href="https://www.instagram.com/iuliariazantseva?igsh=dWNyODA4eGlxc2xz" target="_blank">
+                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-social-15707749.png" alt="Instagram">
                 </a>
             </div>
             <div class="contact-item">
-                <span>Viber: </span>
-                <a href="https://invite.viber.com/?g2=AQAFROKFWzgULlMmMym%2FSKAg4tQqu9EKZ6zPCbXjO2xMzs%2FysahtV6iBeRH2yJTI">
-                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-viber-3670059.png" width="32px" alt="Viber">
+                <span>Viber:</span>
+                <a href="https://invite.viber.com/?g2=AQAFROKFWzgULlMmMym%2FSKAg4tQqu9EKZ6zPCbXjO2xMzs%2FysahtV6iBeRH2yJTI" target="_blank">
+                    <img src="https://raw.githubusercontent.com/Kultup/Estetyka-Stylyu/main/img/free-icon-viber-3670059.png" alt="Viber">
                 </a>
             </div>
         </div>
@@ -141,19 +144,19 @@
         // Слайдер
         const sliders = document.querySelectorAll('.slider');
 
-        sliders.forEach((slider, index) => {
+        sliders.forEach((slider) => {
             let slideIndex = 0;
             const slides = slider.querySelectorAll('.slide');
             showSlides(slider, slides, slideIndex);
         });
 
         function showSlides(slider, slides, slideIndex) {
-            slides.forEach((slide, index) => {
+            slides.forEach((slide) => {
                 slide.style.display = 'none';
             });
             slideIndex++;
             if (slideIndex > slides.length) {
-                slideIndex = 1
+                slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = 'block';
             setTimeout(() => showSlides(slider, slides, slideIndex), 3000); // Смена слайдов каждые 3 секунды
