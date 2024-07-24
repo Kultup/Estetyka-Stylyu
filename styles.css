@@ -8,31 +8,34 @@ body {
     overflow-x: hidden; /* Попередження горизонтального скролінгу */
 }
 
+/* Контейнер */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Шапка сайту */
 header {
-    background: #333;
+    background: linear-gradient(90deg, #333, #444);
     color: #fff;
     padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background 0.3s;
 }
 
+/* Логотип та заголовок */
 .logo-title {
     display: flex;
     align-items: center;
-    flex: 1;
 }
 
 .logo img {
@@ -44,13 +47,14 @@ header {
     margin: 0;
     padding-left: 20px;
     font-size: 24px;
-    font-weight: normal;
+    font-weight: 500;
+    color: #fff;
 }
 
+/* Навігація */
 nav {
     display: flex;
     justify-content: flex-end;
-    flex: 2;
 }
 
 /* Гамбургер-меню */
@@ -58,9 +62,9 @@ nav {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 30px;
     height: 25px;
     z-index: 1100;
@@ -102,11 +106,12 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #e8491d; /* Зміна кольору при наведенні */
 }
 
 /* Героїчний банер */
@@ -119,6 +124,7 @@ nav ul li a:hover {
     text-align: center;
     padding-top: 100px; /* Відступ для хедера */
     transition: padding-top 0.3s, transform 0.3s;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path-to-your-image.jpg') no-repeat center center/cover;
 }
 
 .hero.shift {
@@ -128,24 +134,27 @@ nav ul li a:hover {
 .hero h2 {
     font-size: 3em;
     margin: 0;
+    color: #fff;
 }
 
 .hero p {
     font-size: 1.2em;
+    color: #ddd;
 }
 
 .hero .btn {
-    background: #e8491d;
+    background: linear-gradient(45deg, #e8491d, #d7391a);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .hero .btn:hover {
     background: #d7391a;
+    transform: scale(1.05);
 }
 
 /* Розділ з товарами */
@@ -157,30 +166,48 @@ nav ul li a:hover {
 .products h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     justify-content: center;
 }
 
 .product-item {
-    background: #f4f4f4;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.product-item:hover::after {
+    opacity: 1;
 }
 
 .product-item img {
@@ -191,6 +218,8 @@ nav ul li a:hover {
 
 .product-item h3 {
     margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .product-item p {
@@ -205,10 +234,12 @@ nav ul li a:hover {
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .product-item .btn:hover {
     background: #555;
+    transform: scale(1.05);
 }
 
 /* Розділ "Про нас" */
@@ -222,6 +253,7 @@ nav ul li a:hover {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
+    font-size: 1.1em;
 }
 
 /* Розділ "Контакти" */
@@ -256,6 +288,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Слайдер */
@@ -290,9 +323,9 @@ footer {
         display: none;
         position: absolute;
         top: 100px;
-        right: 0;
+        right: 20px;
         background-color: #333;
-        width: 100%;
+        width: calc(100% - 40px);
         text-align: center;
         padding: 20px 0;
         z-index: 1000;
@@ -337,28 +370,34 @@ footer {
     .contact-item img {
         margin-bottom: 5px; /* Відступ між іконкою і нижньою частиною */
     }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Один товар в рядок */
+    }
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .logo-title h1 {
-        font-size: 20px;
-        padding-left: 10px;
-    }
-
     .hero h2 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 1em;
+        font-size: 0.9em;
+    }
+
+    .contact-item img {
+        width: 24px;
+    }
+
+    .products h2 {
+        font-size: 2em;
     }
 
     .product-item {
-        min-width: 100%;
+        padding: 10px;
+    }
+
+    .product-item img {
+        height: auto;
     }
 }
