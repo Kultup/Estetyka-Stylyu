@@ -1,0 +1,319 @@
+/* Основні стилі для всього сайту */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* Попередження горизонтального скролінгу */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка сайту */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 62px;
+    height: auto;
+}
+
+.logo-title h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Гамбургер-меню */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Героїчний банер */
+.hero {
+
+    height: 500px;
+    color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px; /* Відступ для хедера */
+    transition: padding-top 0.3s, transform 0.3s;
+}
+
+.hero.shift {
+    transform: translateY(150px); /* Переміщення вниз при відкритті меню */
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    background: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #d7391a;
+}
+
+/* Розділ з товарами */
+.products {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    margin-top: 20px;
+}
+
+.product-item p {
+    color: #666;
+}
+
+.product-item .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-item .btn:hover {
+    background: #555;
+}
+
+/* Розділ "Про нас" */
+.about {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Розділ "Контакти" */
+.contact {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.contact p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #e8491d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+
+    nav.active {
+        display: block;
+        transform: translateY(0);
+    }
+
+    nav.inactive {
+        transform: translateY(-100%);
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
