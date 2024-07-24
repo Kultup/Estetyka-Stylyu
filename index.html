@@ -75,7 +75,7 @@
                     <h3>Костюм двійка з натуральної тканини</h3>
                     <p>1 (42/44): ОГ -107; ОБ-110<br>2 (46/48): ОГ -114; ОБ-116<br>Довжина штанів -105<br>Довжина сорочки - 75<br>Довжина рукава - 72</p>
                     <p>Популярному принт доповнений актуальними лампасами</p>
-                    <a href="#contact" class="btn">Замовити через Viber</a>
+                    <a href="#contact" class="btn">Замовити</a>
                 </div>
                 <!-- Додаткові товари можна додати тут -->
             </div>
@@ -161,6 +161,20 @@
             slides[slideIndex - 1].style.display = 'block';
             setTimeout(() => showSlides(slider, slides, slideIndex), 3000); // Смена слайдов каждые 3 секунды
         }
+        // JavaScript для активації анімацій при прокручуванні
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in, .scroll-animate');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    elements.forEach(element => observer.observe(element));
+});
+
     </script>
 </body>
 </html>
