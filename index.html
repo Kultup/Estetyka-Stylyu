@@ -90,9 +90,27 @@
         <div class="container">
             <h2>Контакти</h2>
             <p>Зв'яжіться з нами для замовлення або запитань:</p>
-            <p>Телефон: +380 123 456 789</p>
-            <p>Telegram: <a href="https://t.me/yourtelegram">https://t.me/yourtelegram</a></p>
-            <p>Viber: <a href="https://invite.viber.com/?g2=AQAFROKFWzgULlMmMym%2FSKAg4tQqu9EKZ6zPCbXjO2xMzs%2FysahtV6iBeRH2yJTI">Хуй</a></p>
+            <div class="contact-item">
+                <span>Телефон: +380 123 456 789</span>
+            </div>
+            <div class="contact-item">
+                <span>Telegram: </span>
+                <a href="https://t.me/yourtelegram">
+                    <img src="/img/free-icon-telegram-2111646.png" alt="Telegram" width="32px">
+                </a>
+            </div>
+            <div class="contact-item">
+                <span>Instagram: </span>
+                <a href="https://www.instagram.com/iuliariazantseva?igsh=dWNyODA4eGlxc2xz">
+                    <img src="/img/free-icon-social-15707749.png" width="32px" alt="Instagram">
+                </a>
+            </div>
+            <div class="contact-item">
+                <span>Viber: </span>
+                <a href="https://invite.viber.com/?g2=AQAFROKFWzgULlMmMym%2FSKAg4tQqu9EKZ6zPCbXjO2xMzs%2FysahtV6iBeRH2yJTI">
+                    <img src="/img/free-icon-viber-3670059.png" width="32px" alt="Viber">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -135,10 +153,10 @@
             });
             slideIndex++;
             if (slideIndex > slides.length) {
-                slideIndex = 1;
+                slideIndex = 1
             }
             slides[slideIndex - 1].style.display = 'block';
-            setTimeout(() => showSlides(slider, slides, slideIndex), 2000);
+            setTimeout(() => showSlides(slider, slides, slideIndex), 3000); // Смена слайдов каждые 3 секунды
         }
     </script>
 </body>
