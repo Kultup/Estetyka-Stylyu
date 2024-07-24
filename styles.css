@@ -234,13 +234,15 @@ nav ul li a:hover {
 }
 
 .contact-item span {
-    margin-right: 10px; /* Відступ між текстом та іконкою */
+    margin-right: 10px; /* Відступ між текстом і іконкою */
+    font-size: 1rem;
 }
 
 .contact-item img {
     vertical-align: middle; /* Вирівнювання іконок по вертикалі */
+    width: 32px; /* Фіксована ширина іконок */
+    height: auto; /* Автоматична висота для збереження пропорцій */
 }
-
 
 /* Футер */
 footer {
@@ -282,7 +284,7 @@ footer {
     nav {
         display: none;
         position: absolute;
-        top: 70px; /* Виправлено відступ, щоб не перекривати контент */
+        top: 100px;
         right: 0;
         background-color: #333;
         width: 100%;
@@ -304,7 +306,6 @@ footer {
     nav ul {
         flex-direction: column;
         margin: 0;
-        padding: 0;
     }
 
     nav ul li {
@@ -315,5 +316,20 @@ footer {
         font-size: 18px;
         color: #fff;
         text-decoration: none;
+    }
+
+    .contact-item {
+        flex-direction: column; /* Розміщення тексту та іконки один під одним */
+        align-items: center; /* Центрування по горизонталі */
+        margin: 15px 0;
+    }
+
+    .contact-item span {
+        margin-bottom: 10px; /* Відступ між текстом і іконкою в колонці */
+        margin-right: 0; /* Вимкнути відступ справа на мобільних пристроях */
+    }
+
+    .contact-item img {
+        margin-bottom: 5px; /* Відступ між іконкою і нижньою частиною */
     }
 }
